@@ -1,12 +1,12 @@
-import { eth } from "state/eth"; // Global state: ETH
-import { useState } from "react"; // State management
-import { token } from "state/token"; // Global state: Tokens
+import {eth} from "state/eth"; // Global state: ETH
+import {useState} from "react"; // State management
+import {token} from "state/token"; // Global state: Tokens
 import Layout from "components/Layout"; // Layout wrapper
 import styles from "styles/pages/Claim.module.scss"; // Page styles
 
 export default function Claim() {
   // Global ETH state
-  const { address, unlock }: { address: string | null; unlock: Function } =
+  const {address, unlock}: {address: string | null; unlock: Function} =
     eth.useContainer();
   // Global token state
   const {
@@ -46,13 +46,17 @@ export default function Claim() {
           // Loading details about address
           <div className={styles.card}>
             <h1>Loading airdrop details...</h1>
-            <p>Please hold while we collect details about your address.</p>
+            <p>Please wait while we calculate details about your address.</p>
           </div>
         ) : numTokens == 0 ? (
           // Not part of airdrop
           <div className={styles.card}>
             <h1>You do not qualify.</h1>
-            <p>Unfortunately, your address does not qualify for the airdrop.</p>
+            <p>
+              Unfortunately, your address does not qualify for the airdrop. But
+              there are still lots of ways to get involved in HeroDAO and earn
+              MoonRock tokens & shares in the DAO.
+            </p>
           </div>
         ) : alreadyClaimed ? (
           // Already claimed airdrop
@@ -66,7 +70,7 @@ export default function Claim() {
           // Claim your airdrop
           <div className={styles.card}>
             <h1>Claim your airdrop.</h1>
-            <p>Your address qualifies for {numTokens} tokens.</p>
+            <p>Your address qualifies for {numTokens} MoonRock.</p>
             <button onClick={claimWithLoading} disabled={buttonLoading}>
               {buttonLoading ? "Claiming Airdrop..." : "Claim Airdrop"}
             </button>

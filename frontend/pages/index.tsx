@@ -6,9 +6,6 @@ import styles from "styles/pages/Home.module.scss"; // Page styles
 
 // Setup project details
 const tokenName: string = process.env.NEXT_PUBLIC_TOKEN_NAME ?? "Token Name";
-const heading: string = process.env.NEXT_PUBLIC_HEADING ?? "Some heading";
-const description: string =
-  process.env.NEXT_PUBLIC_DESCRIPTION ?? "Some description";
 
 export default function Home() {
   // Routing
@@ -43,18 +40,28 @@ export default function Home() {
         ) : null}
 
         {/* Project heading */}
-        <h1>{heading}</h1>
+        <h1>Your ticket to the first community owned super hero franchise.</h1>
 
         {/* Project description */}
-        <p>{description}</p>
+        <p>
+          HeroDAO has launched the first community owned super hero franchise,
+          and our first physical comic book,{" "}
+          <strong>Moon Girl, Issue #1</strong>, will be out in a few weeks. The
+          Moon Rock token is a celebration of this new Hero's Universe, and
+          rewards to users who have inspired both Hero DAO and other related
+          projects. The token is similar to tickets won at an arcade for
+          participating and will primarily be used to redeem awesome prizes,
+          like issues of our comic books and more that be revealed in the coming
+          weeks.
+        </p>
 
         {/* Claim button */}
         {!address ? (
           // If not authenticated, disabled
-          <button disabled>Connect Wallet to Claim MoonRock</button>
+          <button disabled>Connect Wallet above to Claim MoonRock</button>
         ) : (
           // Else, reroute to /claim
-          <button onClick={() => push("/claim")}>Claim Tokens</button>
+          <button onClick={() => push("/claim")}>Claim Your MoonRock</button>
         )}
       </div>
     </Layout>
