@@ -45,9 +45,9 @@ export default function Home() {
         {/* Project description */}
         <p>
           HeroDAO has launched the first community owned super hero franchise,
-          and our first physical comic book,{" "}
+          and our first physical comic book,
           <strong>Moon Girl, Issue #1</strong>, will be out in a few weeks. The
-          Moon Rock token is a celebration of this new Hero's Universe, and
+          Moon Rock token is a celebration of this new Heroes Universe, and
           rewards to users who have inspired both Hero DAO and other related
           projects. The token is similar to tickets won at an arcade for
           participating and will primarily be used to redeem awesome prizes,

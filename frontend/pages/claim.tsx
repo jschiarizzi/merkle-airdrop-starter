@@ -55,7 +55,7 @@ export default function Claim() {
             <p>
               Unfortunately, your address does not qualify for the airdrop. But
               there are still lots of ways to get involved in HeroDAO and earn
-              MoonRock tokens & shares in the DAO.
+              MoonRock tokens and shares in the DAO.
             </p>
           </div>
         ) : alreadyClaimed ? (
