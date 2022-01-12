@@ -1,7 +1,7 @@
 import Image from "next/image"; // Images
-import { eth } from "state/eth"; // State container
+import {eth} from "state/eth"; // State container
 import Layout from "components/Layout"; // Layout wrapper
-import { useRouter } from "next/router"; // Routing
+import {useRouter} from "next/router"; // Routing
 import styles from "styles/pages/Home.module.scss"; // Page styles
 
 // Setup project details
@@ -12,16 +12,22 @@ const description: string =
 
 export default function Home() {
   // Routing
-  const { push } = useRouter();
+  const {push} = useRouter();
   // Authentication status
-  const { address }: { address: string | null } = eth.useContainer();
+  const {address}: {address: string | null} = eth.useContainer();
 
   return (
     <Layout>
       <div className={styles.home}>
         {/* Project logo */}
         <div>
-          <Image src="/logo.png" alt="Logo" width={250} height={250} priority />
+          <Image
+            src="/moonrock_token.png"
+            alt="Logo"
+            width={250}
+            height={250}
+            priority
+          />
         </div>
 
         {/* Project introduction article, if it exists */}
@@ -45,7 +51,7 @@ export default function Home() {
         {/* Claim button */}
         {!address ? (
           // If not authenticated, disabled
-          <button disabled>Connect Wallet to Claim Tokens</button>
+          <button disabled>Connect Wallet to Claim MoonRock</button>
         ) : (
           // Else, reroute to /claim
           <button onClick={() => push("/claim")}>Claim Tokens</button>

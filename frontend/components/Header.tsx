@@ -1,7 +1,7 @@
 import Link from "next/link"; // Dynamic routing
 import Image from "next/image"; // Images
-import { eth } from "state/eth"; // Global state
-import { useState } from "react"; // State management
+import {eth} from "state/eth"; // Global state
+import {useState} from "react"; // State management
 import styles from "styles/components/Header.module.scss"; // Component styles
 
 /**
@@ -41,7 +41,7 @@ const threeDotsImage: string =
 
 export default function Header() {
   // Global state
-  const { address, unlock }: { address: string | null; unlock: Function } =
+  const {address, unlock}: {address: string | null; unlock: Function} =
     eth.useContainer();
   // Action menu open state
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -52,7 +52,7 @@ export default function Header() {
       <div className={styles.header__logo}>
         <Link href="/">
           <a>
-            <Image src="/logo.png" alt="Logo" width={58} height={58} priority />
+            <Image src="/logo.svg" alt="Logo" width={58} height={58} priority />
           </a>
         </Link>
       </div>
@@ -79,7 +79,7 @@ export default function Header() {
       {menuOpen ? (
         // Render actions menu if open
         <div className={styles.header__actionMenu}>
-          {actionMenuLinks.map(({ name, icon, url }, i) => {
+          {actionMenuLinks.map(({name, icon, url}, i) => {
             // For each link with a defined url
             return url ? (
               // Render action link containing name and image
