@@ -27,7 +27,7 @@ export default function Home() {
     labels: [
       "DAO Reserve",
       "Product Rewards",
-      "LP Incentivs",
+      "LP Incentives",
       "Artist Rewards",
     ],
     datasets: [
