@@ -3,8 +3,8 @@ import {eth} from "state/eth"; // State container
 import Layout from "components/Layout"; // Layout wrapper
 import {useRouter} from "next/router"; // Routing
 import styles from "styles/pages/Home.module.scss"; // Page styles
-import 'chart.js/auto';
-import {Chart, Pie} from 'react-chartjs-2';
+import "chart.js/auto";
+import {Chart, Pie} from "react-chartjs-2";
 
 // Setup project details
 const tokenName: string = process.env.NEXT_PUBLIC_TOKEN_NAME ?? "Token Name";
@@ -15,26 +15,35 @@ export default function Home() {
   // Authentication status
   const {address}: {address: string | null} = eth.useContainer();
   const data = {
-    labels: [
-      'Airdrop',
-      'Treasury',
-      'Core Team'
+    labels: ["DAO Treasury", "Airdrop"],
+    datasets: [
+      {
+        data: [66, 34],
+        backgroundColor: ["#54A0FF", "#2E86DE"],
+      },
     ],
-    datasets: [{
-      data: [33, 66, 1],
-     backgroundColor: [
-        'rgb(171, 171, 171)',
-        'rgb(9, 72, 146)',
-        'rgb(16, 124, 241)'
-      ],
-    }]
   };
-   const canvasStyle = {
-        maxHeight: "300px",
-        maxWidth: "300px",
-        marginLeft: "auto",
-        marginRight: "auto"
-      };
+  const data2 = {
+    labels: [
+      "DAO Reserve",
+      "Product Rewards",
+      "LP Incentivs",
+      "Artist Rewards",
+    ],
+    datasets: [
+      {
+        data: [65, 10, 10, 15],
+        backgroundColor: ["#54A0FF", "#256BB2", "#98C6FF", "#1C5085"],
+      },
+    ],
+  };
+
+  const canvasStyle = {
+    maxHeight: "300px",
+    maxWidth: "300px",
+    marginLeft: "auto",
+    marginRight: "auto",
+  };
 
   return (
     <Layout>
@@ -90,9 +99,7 @@ export default function Home() {
             Claim Your Moon Rock on Gnosis Chain (xdai)
           </button>
         )}
-        <div style={canvasStyle}>
-            <Pie data={data} width={400} height={400}/>
-        </div>
+
         <br />
         <h2>How is Moon Rock Distributed</h2>
         <p>
@@ -106,7 +113,9 @@ export default function Home() {
             </a>
           </u>
         </p>
-        <Image src="/chart1.svg" alt="Logo" width={400} height={400} priority />
+        <div style={canvasStyle}>
+          <Pie data={data} width={400} height={400} />
+        </div>
         <p>
           The DAO Treasury does not go to any individual or team members. Some
           portions of it, decided through votes and executed without human
@@ -119,7 +128,9 @@ export default function Home() {
           and rewards for contributors, although specific percentages / amounts
           are still being voted on.
         </p>
-        <Image src="/chart2.svg" alt="Logo" width={400} height={400} priority />
+        <div style={canvasStyle}>
+          <Pie data={data2} width={400} height={400} />
+        </div>
 
         <br />
         <h2>Who is being rewarded Moon Rock?</h2>
