@@ -3,6 +3,8 @@ import {eth} from "state/eth"; // State container
 import Layout from "components/Layout"; // Layout wrapper
 import {useRouter} from "next/router"; // Routing
 import styles from "styles/pages/Home.module.scss"; // Page styles
+import 'chart.js/auto';
+import {Chart, Pie} from 'react-chartjs-2';
 
 // Setup project details
 const tokenName: string = process.env.NEXT_PUBLIC_TOKEN_NAME ?? "Token Name";
@@ -12,6 +14,27 @@ export default function Home() {
   const {push} = useRouter();
   // Authentication status
   const {address}: {address: string | null} = eth.useContainer();
+  const data = {
+    labels: [
+      'Airdrop',
+      'Treasury',
+      'Core Team'
+    ],
+    datasets: [{
+      data: [33, 66, 1],
+     backgroundColor: [
+        'rgb(171, 171, 171)',
+        'rgb(9, 72, 146)',
+        'rgb(16, 124, 241)'
+      ],
+    }]
+  };
+   const canvasStyle = {
+        maxHeight: "300px",
+        maxWidth: "300px",
+        marginLeft: "auto",
+        marginRight: "auto"
+      };
 
   return (
     <Layout>
@@ -67,7 +90,9 @@ export default function Home() {
             Claim Your Moon Rock on Gnosis Chain (xdai)
           </button>
         )}
-
+        <div style={canvasStyle}>
+            <Pie data={data} width={400} height={400}/>
+        </div>
         <br />
         <h2>How is Moon Rock Distributed</h2>
         <p>
