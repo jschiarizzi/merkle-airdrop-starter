@@ -5,6 +5,14 @@
   text-align: center;
   padding: 1rem;
 
+  > ul {
+    text-align: left;
+  }
+
+  > li {
+    text-align: left;
+  }
+
   // Logo
   > div {
     margin: 2rem;
