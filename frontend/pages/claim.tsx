@@ -54,8 +54,8 @@ export default function Claim() {
             <h1>You do not qualify.</h1>
             <p>
               Unfortunately, your address does not qualify for the airdrop. But
-              there are still lots of ways to get involved in HeroDAO and earn
-              MoonRock tokens and shares in the DAO.
+              there are still lots of ways to get involved in Hero DAO and earn
+              Moon Rock tokens and shares in the DAO.
             </p>
           </div>
         ) : alreadyClaimed ? (
@@ -70,7 +70,7 @@ export default function Claim() {
           // Claim your airdrop
           <div className={styles.card}>
             <h1>Claim your airdrop.</h1>
-            <p>Your address qualifies for {numTokens} MoonRock.</p>
+            <p>Your address qualifies for {numTokens} Moon Rock.</p>
             <button onClick={claimWithLoading} disabled={buttonLoading}>
               {buttonLoading ? "Claiming Airdrop..." : "Claim Airdrop"}
             </button>

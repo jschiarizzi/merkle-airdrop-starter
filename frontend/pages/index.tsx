@@ -44,7 +44,7 @@ export default function Home() {
 
         {/* Project description */}
         <p>
-          HeroDAO has launched the first community owned super hero franchise,
+          Hero DAO has launched the first community owned super hero franchise,
           and our first physical comic book,
           <strong> Moon Girl, Issue #1</strong>, will be out in a few weeks. The
           Moon Rock token is a celebration of our new Heroes Universe. The token
@@ -58,10 +58,14 @@ export default function Home() {
         {/* Claim button */}
         {!address ? (
           // If not authenticated, disabled
-          <button disabled>Connect Wallet above to Claim MoonRock</button>
+          <button disabled>
+            Connect Wallet above to Claim Moon Rock on Gnosis Chain
+          </button>
         ) : (
           // Else, reroute to /claim
-          <button onClick={() => push("/claim")}>Claim Your MoonRock</button>
+          <button onClick={() => push("/claim")}>
+            Claim Your Moon Rock on Gnosis Chain (xdai)
+          </button>
         )}
 
         <br />
@@ -77,6 +81,7 @@ export default function Home() {
             </a>
           </u>
         </p>
+        <Image src="/chart1.svg" alt="Logo" width={400} height={400} priority />
         <p>
           The DAO Treasury does not go to any individual or team members. Some
           portions of it, decided through votes and executed without human
@@ -84,7 +89,12 @@ export default function Home() {
           artists, and rewards for our licensing partners plus people who buy
           goods from them.
         </p>
-        <p>pie chart here</p>
+        <p>
+          The DAO Treasury will be further broken up into a long term Reserve,
+          and rewards for contributors, although specific percentages / amounts
+          are still being voted on.
+        </p>
+        <Image src="/chart2.svg" alt="Logo" width={400} height={400} priority />
 
         <br />
         <h2>Who is being rewarded Moon Rock?</h2>
@@ -99,7 +109,7 @@ export default function Home() {
             </ul>
           </p>
           <p>
-            In total, this amounts to about 4000 addresses. If your address was
+            In total, this amounts to about ~4000 addresses. If your address was
             included in multiple of these groups, then your total airdrop amount
             was mutlipled.
           </p>
@@ -121,6 +131,14 @@ export default function Home() {
           width="500"
           height="500"
         ></iframe>
+
+        <br />
+        <h2>What to do next?</h2>
+        <p>
+          After you claim your Moon Rock, or if you are looking for more info,
+          consider joining our discord community, participating in a Town Hall
+          (Wednesdays at 4:30 PM EST), and contributing to Hero DAO!
+        </p>
       </div>
     </Layout>
   );
