@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-pragma solidity >=0.8.0;
+pragma solidity ^0.8.7;
 
 /// ============ Imports ============
 
-import { ERC20 } from "@solmate/tokens/ERC20.sol"; // Solmate: ERC20
-import { MerkleProof } from "@openzeppelin/utils/cryptography/MerkleProof.sol"; // OZ: MerkleProof
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol"; 
+import { MerkleProof } from "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/cryptography/MerkleProof.sol"; // OZ: MerkleProof
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 /// @title MerkleClaimERC20
