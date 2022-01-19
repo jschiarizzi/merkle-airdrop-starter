@@ -6,7 +6,6 @@ type IConfig = {
 
 // Config from generator
 const config: IConfig = {
-  {
     "decimals": 18,
     "airdrop": {
       "0x00000000005dbcB0d0513FcDa746382Fe8a53468": 86656.61441,
@@ -3048,7 +3047,6 @@ const config: IConfig = {
       "0xfFD1Ac3e8818AdCbe5C597ea076E8D3210B45df5": 86656.61441,
       "0xFfe296bbbc86dFaC056B42c6180d9f8b4cB412aa": 86656.61441
     }
-  }
 };
 
 // Export config
