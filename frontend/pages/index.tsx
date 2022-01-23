@@ -135,7 +135,6 @@ export default function Home() {
         <br />
         <h2>Who is being rewarded Moon Rock?</h2>
         <div className="text-left">
-          <p>
             <ul>
               <li>Users who participated in the Greatest Larp</li>
               <li>Members of the Meta Cartel</li>
@@ -143,7 +142,6 @@ export default function Home() {
               <li>Minters of the firt PUNKS comic NFT</li>
               <li>Hero DAO members, pre Moon Rock launch</li>
             </ul>
-          </p>
           <p>
             In total, this amounts to about ~4000 addresses. If your address was
             included in multiple of these groups, then your total airdrop amount

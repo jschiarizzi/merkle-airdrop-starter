@@ -20,7 +20,15 @@ const networkId = process.env.NEXT_PUBLIC_RPC_NETWORK
 
 // Onboard.js wallet providers
 const wallets: (WalletModule | WalletInitOptions)[] = [
-  { walletName: "metamask" },
+  { walletName: "metamask", preferred: true },
+  { walletName: "coinbase", preferred: true },
+  {walletName: 'tally'},
+  { walletName: "torus" },
+  {walletName: 'trust', preferred: true, rpcUrl: process.env.NEXT_PUBLIC_RPC_URL},
+  {
+    walletName: 'ledger',
+    rpcUrl: process.env.NEXT_PUBLIC_RPC_URL
+  },
   {
     walletName: "walletConnect",
     networkId,

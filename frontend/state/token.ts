@@ -77,8 +77,13 @@ function useToken() {
    */
   const getAirdropAmount = (address: string): number => {
     // If address is in airdrop
+    console.log("calling getAirdropAmount");
+    address = ethers.utils.getAddress(address)
+
     if (address in config.airdrop) {
       // Return number of tokens available
+      console.log("address is in the config");
+
       return config.airdrop[address];
     }
 
@@ -109,12 +114,24 @@ function useToken() {
     // Get properly formatted address
     const formattedAddress: string = ethers.utils.getAddress(address);
     // Get tokens for address
+
+    console.log("=== joseph learns stuff ===");
+    console.log(config.airdrop[address]);
+
+    console.log("decimals: " + config.decimals.toString());
+
     const numTokens: string = ethers.utils
       .parseUnits(config.airdrop[address].toString(), config.decimals)
       .toString();
 
+    console.log("num tokens" + numTokens);
+
+
     // Generate hashed leaf from address
     const leaf: Buffer = generateLeaf(formattedAddress, numTokens);
+    console.log("leaf:");
+    return console.log(leaf);
+
     // Generate airdrop proof
     const proof: string[] = merkleTree.getHexProof(leaf);
 
@@ -132,13 +149,21 @@ function useToken() {
    * After authentication, update number of tokens to claim + claim status
    */
   const syncStatus = async (): Promise<void> => {
+    console.log("calling sync status");
+
     // Toggle loading
     setDataLoading(true);
 
     // Force authentication
     if (address) {
+      console.log("users address = ");
+      console.log(address);
+
+
       // Collect number of tokens for address
       const tokens = getAirdropAmount(address);
+      console.log("we determined you get: " + tokens.toString());
+
       setNumTokens(tokens);
 
       // Collect claimed status for address, if part of airdrop (tokens > 0)
