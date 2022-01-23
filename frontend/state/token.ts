@@ -121,7 +121,7 @@ function useToken() {
     console.log("decimals: " + config.decimals.toString());
 
     const numTokens: string = ethers.utils
-      .parseUnits(config.airdrop[address].toString(), config.decimals)
+      .parseUnits(config.airdrop[ethers.utils.getAddress(address)].toString(), config.decimals)
       .toString();
 
     console.log("num tokens" + numTokens);
@@ -130,7 +130,7 @@ function useToken() {
     // Generate hashed leaf from address
     const leaf: Buffer = generateLeaf(formattedAddress, numTokens);
     console.log("leaf:");
-    return console.log(leaf);
+    console.log(leaf);
 
     // Generate airdrop proof
     const proof: string[] = merkleTree.getHexProof(leaf);
