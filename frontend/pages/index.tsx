@@ -143,9 +143,10 @@ export default function Home() {
               <li>Hero DAO members, pre Moon Rock launch</li>
             </ul>
           <p>
-            In total, this amounts to about ~4000 addresses. If your address was
+            In total, this amounts to about ~3000 addresses. If your address was
             included in multiple of these groups, then your total airdrop amount
-            was mutlipled.
+            was mutlipled. Check <u><a href="https://github.com/HeroDAO/moonrock-airdrop">here </a></u>
+            for a full list of addresses included.
           </p>
         </div>
 
