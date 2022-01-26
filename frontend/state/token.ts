@@ -61,7 +61,7 @@ function useToken() {
       process.env.NEXT_PUBLIC_CONTRACT_ADDRESS ?? "",
       [
         // hasClaimed mapping
-        "function hasClaimed(address) public view returns (bool)",
+        "function hasClaimed(address) external view returns (bool)",
         // Claim function
         "function claim(address to, uint256 amount, bytes32[] calldata proof) external",
       ],
