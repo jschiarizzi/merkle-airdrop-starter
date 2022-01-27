@@ -45,7 +45,7 @@ export default function Claim() {
         ) : dataLoading ? (
           // Loading details about address
           <div className={styles.card}>
-            <h1>Loading airdrop details...</h1>
+            <h1>Loading airdrop details... Make sure you are on Gnosis Chain (xdai)</h1>
             <p>Please wait while we calculate details about your address.</p>
           </div>
         ) : numTokens == 0 ? (

@@ -165,6 +165,7 @@ function useToken() {
       console.log("we determined you get: " + tokens.toString());
 
       setNumTokens(tokens);
+      console.log("number of tokens set");
 
       // Collect claimed status for address, if part of airdrop (tokens > 0)
       if (tokens > 0) {
