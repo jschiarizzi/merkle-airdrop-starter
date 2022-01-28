@@ -116,7 +116,7 @@ function useToken() {
     // Get tokens for address
 
     console.log("=== joseph learns stuff ===");
-    console.log(config.airdrop[address]);
+    console.log(config.airdrop[ethers.utils.getAddress(address)]);
 
     console.log("decimals: " + config.decimals.toString());
 
