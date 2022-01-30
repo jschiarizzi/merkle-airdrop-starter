@@ -63,7 +63,7 @@ export default function Claim() {
           <div className={styles.card}>
             <h1>Already claimed.</h1>
             <p>
-              Your address ({address}) has already claimed {numTokens} tokens.
+              Your address ({address}) has already claimed {numTokens} tokens on {process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}.
             </p>
           </div>
         ) : (
