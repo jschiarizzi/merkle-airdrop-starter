@@ -65,7 +65,7 @@ export default function Claim() {
         ) : alreadyClaimed ? (
           // Already claimed airdrop
           <div className={styles.card}>
-            <h1>Congrats! You've claimed your airdrop already! 🎉🎉🎉</h1>
+            <h1>Congrats! You have claimed your airdrop already! 🎉🎉🎉</h1>
             <p>
               Your address ({address}) has already claimed {numTokens} tokens on{" "}
               {process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}.
