@@ -101,6 +101,29 @@ export default function Home() {
         )}
 
         <br />
+        <Image src="/moon-rock-found.png" height={450} width={300} />
+        <br />
+        <h2>What to do next, after claiming?</h2>
+        <p>
+          After you claim your Moon Rock, or if you are looking for more info,
+          consider joining our discord community, participating in a Town Hall
+          (Wednesdays at 4:30 PM EST), and contributing to Hero DAO!
+        </p>
+        <p>
+          You can provide Moon Rock tokens to{" "}
+          <strong>
+            <a href="https://swapr.eth.link/#/add/0x481D6104761442F162d1f7AC3DC6F98896e7A4ef/XDAI?chainId=100">
+              this swapr liquidity pool{" "}
+            </a>
+          </strong>
+          and earn additional rewards. If certain liquidity goals are hit as a
+          community, additional rewards are unlocked are unlocked through{" "}
+          <strong>
+            <a href="https://carrot.eth.link/#/?chainId=100">Carrot.</a>{" "}
+          </strong>
+        </p>
+
+        <br />
         <h2>How is Moon Rock Distributed</h2>
         <p>
           <strong>33.3%</strong> - Airdrop to people we want to invite into our
@@ -135,17 +158,20 @@ export default function Home() {
         <br />
         <h2>Who is being rewarded Moon Rock?</h2>
         <div className="text-left">
-            <ul>
-              <li>Users who participated in the Greatest Larp</li>
-              <li>Members of the Meta Cartel</li>
-              <li>Meta Game seeds holders and LPs</li>
-              <li>Minters of the firt PUNKS comic NFT</li>
-              <li>Hero DAO members, pre Moon Rock launch</li>
-            </ul>
+          <ul>
+            <li>Users who participated in the Greatest Larp</li>
+            <li>Members of the Meta Cartel</li>
+            <li>Meta Game seeds holders and LPs</li>
+            <li>Minters of the firt PUNKS comic NFT</li>
+            <li>Hero DAO members, pre Moon Rock launch</li>
+          </ul>
           <p>
             In total, this amounts to about ~3000 addresses. If your address was
             included in multiple of these groups, then your total airdrop amount
-            was mutlipled. Check <u><a href="https://github.com/HeroDAO/moonrock-airdrop">here </a></u>
+            was mutlipled. Check{" "}
+            <u>
+              <a href="https://github.com/HeroDAO/moonrock-airdrop">here </a>
+            </u>
             for a full list of addresses included.
           </p>
         </div>
@@ -166,14 +192,6 @@ export default function Home() {
           width="500"
           height="500"
         ></iframe>
-
-        <br />
-        <h2>What to do next?</h2>
-        <p>
-          After you claim your Moon Rock, or if you are looking for more info,
-          consider joining our discord community, participating in a Town Hall
-          (Wednesdays at 4:30 PM EST), and contributing to Hero DAO!
-        </p>
       </div>
     </Layout>
   );
