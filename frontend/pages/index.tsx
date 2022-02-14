@@ -117,7 +117,7 @@ export default function Home() {
             </a>
           </strong>
           and earn additional rewards. If certain liquidity goals are hit as a
-          community, additional rewards are unlocked are unlocked through{" "}
+          community, additional rewards are unlocked through{" "}
           <strong>
             <a href="https://carrot.eth.link/#/?chainId=100">Carrot.</a>{" "}
           </strong>
