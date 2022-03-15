@@ -1,13 +1,14 @@
 import {eth} from "state/eth"; // Global state: ETH
 import Image from "next/image"; // Images
 import {useState} from "react"; // State management
+import { ethers } from "ethers"; // Ethers
 import {token} from "state/token"; // Global state: Tokens
 import Layout from "components/Layout"; // Layout wrapper
 import styles from "styles/pages/Claim.module.scss"; // Page styles
 
 export default function Claim() {
   // Global ETH state
-  const {address, unlock}: {address: string | null; unlock: Function} =
+  const {address, provider, unlock}: {address: string | null; provider: ethers.providers.Web3Provider | null; unlock: Function} =
     eth.useContainer();
   // Global token state
   const {
@@ -32,6 +33,26 @@ export default function Claim() {
     await claimAirdrop(); // Claim
     setButtonLoading(false); // Toggle
   };
+
+
+  const addToWallet = async() => {
+    try  {
+      if (provider != null) {
+        await provider.send(
+          'wallet_watchAsset',{type: 'ERC20',
+            options: {
+              address: "0x481d6104761442f162d1f7ac3dc6f98896e7a4ef", // The address that the token is at.
+              symbol: "MR",
+              decimals: 18,
+              image: 'https://moonrock.herodao.org/_next/image?url=%2Fmoonrock_token.png&w=256&q=75',
+            }}
+        );
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   return (
     <Layout>
@@ -70,6 +91,7 @@ export default function Claim() {
               Your address ({address}) has already claimed {numTokens} tokens on{" "}
               {process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}.
             </p>
+            <button onClick={() => addToWallet()}>Add Moonrock to Wallet</button>
             <br />
             <Image src="/moon-rock-found.png" height={450} width={300} />
             <br />
