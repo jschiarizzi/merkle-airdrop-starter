@@ -162,7 +162,7 @@ export default function Home() {
             <li>Users who participated in the Greatest Larp</li>
             <li>Members of the Meta Cartel</li>
             <li>Meta Game seeds holders and LPs</li>
-            <li>Minters of the firt PUNKS comic NFT</li>
+            <li>Minters of the first PUNKS comic NFT</li>
             <li>Hero DAO members, pre Moon Rock launch</li>
           </ul>
           <p>
@@ -183,15 +183,46 @@ export default function Home() {
           and participating in our quickly growing ecosystem. The first of many
           things to redeem your Moon Rock for will be a
           <strong> Moon Girl, Issue #1</strong> comic. Comics will be redeemed
-          for increasingly large amounts of Moon Rock accourding to this bonding
-          curve.
+          for increasingly large amounts of Moon Rock over time.
         </p>
         <br />
-        <iframe
-          src="https://www.desmos.com/calculator/ig111sspnj?embed"
-          width="500"
-          height="500"
-        ></iframe>
+        <h2>More uses and apps coming soon</h2>
+        <p>
+          Hero DAO community has several upcoming plans for more ways to
+          integrate Moon Rock into our activities. These are all works in
+          progress:
+          <ul>
+            <li>
+              Staking Moon Rock to be featured as a character in upcoming comic
+              books.
+            </li>
+            <li>
+              Redemption of prizes from our swag store and physical products we
+              are producing with Moon Rock.
+            </li>
+            <li>Burning Moon Rock to get early access to content.</li>
+            <li>
+              Rewards to artists and other contributors that do not dilute the
+              DAO.
+            </li>
+            <li>
+              Staking Moon Rock on the completion of a particular comic or work.
+            </li>
+            <li>
+              Staking Moon Rock to be guaranteed as spot as an extra in movies
+              and shorts.
+            </li>
+          </ul>
+        </p>
+        <br />
+        <h2> Ready to meet the community?</h2>
+        <p>
+          Join us in{" "}
+          <a href="https://discord.gg/6MAVMRUn7x/">
+            <strong>Discord,</strong> and help us build a hero franchise
+            together.
+          </a>
+        </p>
       </div>
     </Layout>
   );
