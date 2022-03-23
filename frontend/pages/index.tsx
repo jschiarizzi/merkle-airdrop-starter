@@ -197,12 +197,12 @@ export default function Home() {
               books.
             </li>
             <li>
-              Redemption of prizes from our swag store and physical products
-              we're producing with Moon Rock.
+              Redemption of prizes from our swag store and physical products we
+              are producing with Moon Rock.
             </li>
             <li>Burning Moon Rock to get early access to content.</li>
             <li>
-              Rewards to artists and other contributors that don't dilute the
+              Rewards to artists and other contributors that do not dilute the
               DAO.
             </li>
             <li>
@@ -219,7 +219,8 @@ export default function Home() {
         <p>
           Join us in{" "}
           <a href="https://discord.gg/6MAVMRUn7x/">
-            <strong>Discord,</strong> and let's build a franchise together.
+            <strong>Discord,</strong> and help us build a hero franchise
+            together.
           </a>
         </p>
       </div>
