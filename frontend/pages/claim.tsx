@@ -130,7 +130,7 @@ export default function Claim() {
             <h2> Ready to meet the community?</h2>
             <p>
               Join us in{" "}
-              <a href="https://discord.gg/6MAVMRUn7x/">
+              <a href="https://discord.gg/6MAVMRUn7x">
                 <strong>Discord,</strong> and help us build a franchise
                 together.
               </a>
